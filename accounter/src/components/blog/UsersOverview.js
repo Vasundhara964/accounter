@@ -88,22 +88,24 @@ class UsersOverview extends React.Component {
   render() {
     const { title } = this.props;
     return (
-      <Card small className="h-100">
-        <CardHeader className="border-bottom">
+      <Card small className="h-100" style={{backgroundColor:'#e6ffff'}}>
+        <CardHeader className="border-bottom" style={{backgroundColor:'#e6ffff'}}>
           <h6 className="m-0">{title}</h6>
         </CardHeader>
-        <CardBody className="pt-0">
+        <CardBody className="pt-0" style={{backgroundColor:'#e6ffff'}}>
           <Row className="border-bottom py-2 bg-light">
-            <Col sm="6" className="d-flex mb-2 mb-sm-0">
+            <Col sm="6" className="d-flex mb-2 mb-sm-0" style={{backgroundColor:'#e6ffff'}}>
               <RangeDatePicker />
             </Col>
-            <Col>
+            <Col style={{backgroundColor:'#e6ffff'}}>
               <Button
                 size="sm"
-                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-0 mt-sm-0"
               >
-                View Full Report &rarr;
+                View Full Report
               </Button>
+              <Button  size="sm"
+                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-0 mt-sm-0">&rarr;</Button>
             </Col>
           </Row>
           <canvas
@@ -133,44 +135,51 @@ UsersOverview.propTypes = {
 };
 
 UsersOverview.defaultProps = {
-  title: "Users Overview",
+ 
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
     datasets: [
       {
-        label: "Current Month",
+        label: "Incomes",
         fill: "start",
         data: [
-          500,
-          800,
-          320,
-          180,
-          240,
-          320,
-          230,
-          650,
-          590,
+         /* 500,
+          80000,
+          32000,
+          18000,
+          24000,
+          32000,
+          23000,
+          65000,
+          59000,
+          120000,
+          75000,
+          94000,
+          142000,
           1200,
-          750,
-          940,
-          1420,
-          1200,
-          960,
-          1450,
-          1820,
-          2800,
-          2102,
-          1920,
-          3920,
-          3202,
-          3140,
-          2800,
-          3200,
-          3200,
-          3400,
-          2910,
-          3100,
-          4250
+          96000,
+          145000,
+          182000,
+          280000,
+          210200,
+          192000,
+          392000,
+          320200,
+          314000,
+          280000,
+          320000,
+          320000,
+          340000,
+          291000,
+          310000,
+          425000*/
+          66000,
+          168000,
+          38498,
+          49500,
+          12238,
+          57750,
+          168300
         ],
         backgroundColor: "rgba(0,123,255,0.1)",
         borderColor: "rgba(0,123,255,1)",
@@ -181,45 +190,103 @@ UsersOverview.defaultProps = {
         pointHoverRadius: 3
       },
       {
-        label: "Past Month",
+        label: "Outgoing",
         fill: "start",
         data: [
-          380,
-          430,
-          120,
-          230,
-          410,
-          740,
-          472,
-          219,
-          391,
-          229,
-          400,
-          203,
-          301,
-          380,
-          291,
-          620,
-          700,
-          300,
-          630,
-          402,
-          320,
-          380,
-          289,
-          410,
-          300,
-          530,
-          630,
-          720,
-          780,
-          1200
+          /*38000,
+          43000,
+          12000,
+          23000,
+          41000,
+          74000,
+          47200,
+          21900,
+          39100,
+          22900,
+          40000,
+          20300,
+          30100,
+          38000,
+          29100,
+          62000,
+          70000,
+          30000,
+          63000,
+          40200,
+          32000,
+          38000,
+          28900,
+          41000,
+          30000,
+          53000,
+          63000,
+          72000,
+          78000,
+          120000*/
+         50000,
+         150000,
+         30000,
+         45000,
+         10000,
+         50000,
+         150000
         ],
         backgroundColor: "rgba(255,65,105,0.1)",
         borderColor: "rgba(255,65,105,1)",
         pointBackgroundColor: "#ffffff",
         pointHoverBackgroundColor: "rgba(255,65,105,1)",
-        borderDash: [3, 3],
+       
+        borderWidth: 1,
+        pointRadius: 0,
+        pointHoverRadius: 2,
+        pointBorderColor: "rgba(255,65,105,1)"
+      },
+      {
+        label: "Profits",
+        fill: "start",
+        data: [/*12000,    
+          37000,    
+          20000,    
+          -5000,    
+          -17000,    
+          -42000,    
+          -24200,  
+          431000,    
+          19900,    
+          97100,    
+          35000,    
+          73700,    
+          111900,    
+          82000,    
+          66900,    
+          83000,    
+          112000,    
+          250000,    
+          147200,    
+          178600,    
+          712000,    
+          282200,    
+          285100,    
+          239000,    
+          290000,    
+          267000,    
+          11000,    
+          18000,    
+          32000,    
+          305000 */   
+         16000,
+         18000,
+         8498,
+         4500,
+         2238,
+         7750,
+         18300
+          ],
+        backgroundColor: "rgba(105,225,65,0.1)",
+        borderColor: "rgba(55,265,65,1)",
+        pointBackgroundColor: "#ffffff",
+        pointHoverBackgroundColor: "rgba(255,65,105,1)",
+     
         borderWidth: 1,
         pointRadius: 0,
         pointHoverRadius: 2,

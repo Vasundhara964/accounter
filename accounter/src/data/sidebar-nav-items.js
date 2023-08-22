@@ -1,40 +1,60 @@
 export default function() {
   return [
+    /*{
+      title: "Dashboard",
+      to: "/blog-UsersOverview",
+      htmlBefore: '<i class="material-icons">speed</i>',
+    },*/
     {
-      title: "Blog Dashboard",
+      title: "Dashboard",
       to: "/blog-overview",
-      htmlBefore: '<i class="material-icons">edit</i>',
+      htmlBefore: '<i class="material-icons">speed</i>',
       htmlAfter: ""
     },
     {
-      title: "Blog Posts",
-      htmlBefore: '<i class="material-icons">vertical_split</i>',
-      to: "/blog-posts",
+      title: "Inventory",
+      htmlBefore: '<i class="material-icons">inventory</i>',
+      to: "/inventory",
     },
     {
-      title: "Add New Post",
-      htmlBefore: '<i class="material-icons">note_add</i>',
-      to: "/add-new-post",
+      title: "invoices",
+      htmlBefore: '<i class="material-icons">book</i>',
+      to: "/invoices",
     },
     {
-      title: "Forms & Components",
-      htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/components-overview",
-    },
-    {
-      title: "Tables",
-      htmlBefore: '<i class="material-icons">table_chart</i>',
-      to: "/tables",
-    },
-    {
-      title: "User Profile",
+      title: "customers",
       htmlBefore: '<i class="material-icons">person</i>',
-      to: "/user-profile-lite",
+      to: "/customers",
     },
     {
-      title: "Errors",
-      htmlBefore: '<i class="material-icons">error</i>',
+      title: "bills",
+      htmlBefore: '<i class="material-icons">trolley</i>',
+      to: "/bills",
+    },
+    {
+      title: "vendors",
+      htmlBefore: '<i class="material-icons">people</i>',
+      to: "/vendors",
+    },
+    /*{
+      title: "HR",
+      htmlBefore: '<i class="material-icons">people</i>',
+      to: "/tables",
+    },*/
+    {
+      title:"Banking",
+      htmlBefore: '<i class="material-icons">house</i>',
+      to: "/payment",
+    },
+    /*{
+      title:"Reports",
+      htmlBefore: '<i class="material-icons">report</i>',
       to: "/errors",
-    }
+    },*/
+    /*{
+      title:"Apps",
+      htmlBefore: '<i class="material-icons">rocket</i>',
+    }*/
   ];
 }
+

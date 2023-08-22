@@ -2,60 +2,51 @@ import React from "react";
 import PropTypes from "prop-types";
 import {
   Card,
-  CardHeader,
+  Button,
   CardBody,
-  ListGroup,
-  ListGroupItem,
-  CardFooter,
-  Row,
-  Col,
+  Form,
+  FormGroup,
   FormSelect
 } from "shards-react";
+import ProgressBars from "../components-overview/ProgressBars";
 
 const TopReferrals = ({ title, referralData }) => (
-  <Card small>
-    <CardHeader className="border-bottom">
-      <h6 className="m-0">{title}</h6>
-      <div className="block-handle" />
-    </CardHeader>
-
-    <CardBody className="p-0">
-      <ListGroup small flush className="list-group-small">
-        {referralData.map((item, idx) => (
-          <ListGroupItem key={idx} className="d-flex px-3">
-            <span className="text-semibold text-fiord-blue">{item.title}</span>
-            <span className="ml-auto text-right text-semibold text-reagent-gray">
-              {item.value}
-            </span>
-          </ListGroupItem>
-        ))}
-      </ListGroup>
-    </CardBody>
-
-    <CardFooter className="border-top">
-      <Row>
-        {/* Time Span */}
-        <Col>
-          <FormSelect
+  <Card small style={{backgroundColor:'#ffc266'}}>
+   
+   
+    <CardBody className="d-flex flex-column">
+       <h3>{title}</h3>
+             <Button
+                size="sm"
+                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-0 mt-sm-0" style={{backgroundColor:'skyblue'}}
+              >
+                View Report &rarr;
+              </Button>
+              <p>Amount that you're yet to pay to your vendors</p>
+   
+      <Form className="quick-post-form">
+       
+        <FormGroup>
+        <h6>Total unpaid bills:</h6><p style={{fontFamily:'fantasy'}}>$1,199.70</p>
+   
+       
+        <h6>open:</h6><p style={{color:'green'}}>$1,199.70</p>
+        <ProgressBars/>
+          <h6>Overdue:</h6>
+           <FormSelect
             size="sm"
-            value="last-week"
-            style={{ maxWidth: "130px" }}
+            value="$0.00"
+            style={{ maxWidth: "130px" ,color:'red'}}
             onChange={() => {}}
           >
-            <option value="last-week">Last Week</option>
-            <option value="today">Today</option>
-            <option value="last-month">Last Month</option>
-            <option value="last-year">Last Year</option>
+            <option value="$0.00">$0.00</option>
+            <option value="$0.00">$0.00</option>
+            <option value="$0.00">$0.00</option>
+            <option value="$0.00">$0.00</option>
           </FormSelect>
-        </Col>
-
-        {/* View Full Report */}
-        <Col className="text-right view-report">
-          {/* eslint-disable-next-line */}
-          <a href="#">Full report &rarr;</a>
-        </Col>
-      </Row>
-    </CardFooter>
+          </FormGroup>
+      </Form>
+    </CardBody>
   </Card>
 );
 
@@ -71,41 +62,41 @@ TopReferrals.propTypes = {
 };
 
 TopReferrals.defaultProps = {
-  title: "Top Referrals",
-  referralData: [
-    {
-      title: "GitHub",
-      value: "19,291"
-    },
-    {
-      title: "Stack Overflow",
-      value: "11,201"
-    },
-    {
-      title: "Hacker News",
-      value: "9,291"
-    },
-    {
-      title: "Reddit",
-      value: "8,281"
-    },
-    {
-      title: "The Next Web",
-      value: "7,128"
-    },
-    {
-      title: "Tech Crunch",
-      value: "6,218"
-    },
-    {
-      title: "YouTube",
-      value: "1,218"
-    },
-    {
-      title: "Adobe",
-      value: "1,171"
-    }
-  ]
+  title: "Payables",
+  // referralData: [
+  //   {
+  //     title: "GitHub",
+  //     value: "19,291"
+  //   },
+  //   {
+  //     title: "Stack Overflow",
+  //     value: "11,201"
+  //   },
+  //   {
+  //     title: "Hacker News",
+  //     value: "9,291"
+  //   },
+  //   {
+  //     title: "Reddit",
+  //     value: "8,281"
+  //   },
+  //   {
+  //     title: "The Next Web",
+  //     value: "7,128"
+  //   },
+  //   {
+  //     title: "Tech Crunch",
+  //     value: "6,218"
+  //   },
+  //   {
+  //     title: "YouTube",
+  //     value: "1,218"
+  //   },
+  //   {
+  //     title: "Adobe",
+  //     value: "1,171"
+  //   }
+  // ]
 };
 
 export default TopReferrals;

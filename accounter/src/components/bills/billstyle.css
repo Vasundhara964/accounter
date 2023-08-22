@@ -1,0 +1,28 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #bbb5b5;
+    background-color: aquamarine;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #a0aca4;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color:azure
+  }
+  
+  select {
+    padding: 5px;
+    width: 100%;
+  }

@@ -1,11 +1,11 @@
 import React from "react";
 import { ListGroupItem, Progress } from "shards-react";
 
-const ProgressBars = () => (
+const ProgressBars1 = () => (
   <ListGroupItem className="px-3">
   {/* //   <div className="mb-2">
   //     <strong className="text-muted d-block mb-3">Progress Bars</strong> */}
-      <Progress style={{ height: "6px", backgroundColor:'#ffc266' }} value={30} className="mb-3" />
+      <Progress style={{ height: "6px", backgroundColor:'#ffc266' }} value={80} className="mb-3" />
       {/* <Progress
         theme="success"
         style={{ height: "5px" }}
@@ -28,4 +28,4 @@ const ProgressBars = () => (
   </ListGroupItem>
 );
 
-export default ProgressBars;
+export default ProgressBars1;

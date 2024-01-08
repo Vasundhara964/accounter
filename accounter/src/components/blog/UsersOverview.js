@@ -282,7 +282,7 @@ UsersOverview.defaultProps = {
          7750,
          18300
           ],
-        backgroundColor: "rgba(105,225,65,0.1)",
+        backgroundColor: "rgba(10.5,255,65,0.1)",
         borderColor: "rgba(55,265,65,1)",
         pointBackgroundColor: "#ffffff",
         pointHoverBackgroundColor: "rgba(255,65,105,1)",

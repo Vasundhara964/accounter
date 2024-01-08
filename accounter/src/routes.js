@@ -26,6 +26,26 @@ import Login from "./login";
 import customerdata from "./components/services/customerdata";
 import Customers from "./components/customers/customers";
 import Addcustomer from "./components/customers/addcustomer";
+import Home from "./components/dashboard2";
+import App from "./components/photo";
+import faq from "./components/faq";
+import ImagePage from "./components/payment/payment";
+import PaymentPage from "./components/payment/payment";
+import qr from "./components/qr";
+import QR from "./components/qr";
+import phonepe from "./components/phonepe";
+import phonepe2 from "./components/phonepe2";
+import phonepe3 from "./components/phonepe3";
+import ForgotPassword from "./components/components-overview/forgotpassword";
+import googlepay from "./components/googlepay";
+import googlepay2 from "./components/googlepay2";
+import googlepay3 from "./components/googlepay3";
+import card from "./components/card";
+import card2 from "./components/card2";
+import card3 from "./components/card3";
+import randqr from "./components/qr";
+import RandomQRCodeGenerator from "./components/qr";
+import UserAccountDetails from "./components/user-profile-lite/UserAccountDetails";
 //import Dashboard from "./components/dashboard/dashboard";
 export default [
   {
@@ -35,9 +55,24 @@ export default [
     component: () => <Navigate to="/login" />
   },
   {
+    path: "/forgotpassword",
+    layout: DefaultLayout,
+    component: ForgotPassword 
+  },
+  {
+    path:"/UserAccountDetails",
+    layout:DefaultLayout,
+    component: UserAccountDetails
+  },
+  {
     path: "/blog-overview",
     layout: DefaultLayout,
     component: BlogOverview
+  },
+  {
+    path: "/dashboard2",
+    layout: DefaultLayout,
+    component: Home
   },
   {
     path:"/login",
@@ -138,7 +173,73 @@ component: Inventory
   {
     path: "/payment",
     layout: DefaultLayout,
-    component: payment
+    component: PaymentPage
+  },
+ 
+  /*{
+    path: "/qr",
+    layout: DefaultLayout,
+    component: QR
+  },*/
+  {
+    path: "/photo",
+    layout: DefaultLayout,
+    component: App
+  },
+  {
+    path: "/phonepe",
+    layout: DefaultLayout,
+    component: phonepe
+  },
+  {
+    path: "/phonepe2",
+    layout: DefaultLayout,
+    component: phonepe2
+  },
+  {
+    path: "/phonepe3",
+    layout: DefaultLayout,
+    component: phonepe3 
+  },
+  {
+    path: "/googlepay",
+    layout: DefaultLayout,
+    component: googlepay
+  },
+  {
+    path: "/googlepay2",
+    layout: DefaultLayout,
+    component: googlepay2
+  },
+  {
+    path: "/googlepay3",
+    layout: DefaultLayout,
+    component: googlepay3 
+  },
+  {
+    path: "/card",
+    layout: DefaultLayout,
+    component: card
+  },
+  {
+    path: "/card2",
+    layout: DefaultLayout,
+    component: card2
+  },
+  {
+    path: "/card3",
+    layout: DefaultLayout,
+    component: card3 
+  },
+  {
+    path: "/qr",
+    layout: DefaultLayout,
+    component: RandomQRCodeGenerator 
+  },
+  {
+    path: "/faq",
+    layout: DefaultLayout,
+    component: faq
   },
   {
     path: "/vendors",

@@ -90,7 +90,6 @@ const navigate=useNavigate()
 const addstock=()=>{
     navigate('/addstock')
 }
-
 const onDelete=async(id)=>{
     debugger
 const data =  await InventoryData.deleteBill(id)

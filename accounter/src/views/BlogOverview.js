@@ -11,12 +11,12 @@ import NewDraft from "./../components/blog/NewDraft";
 import TopReferrals from "./../components/common/TopReferrals";
 
 const BlogOverview = ({ smallStats }) => (
+
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Dashboard" className="text-sm-left mb-3" />
-    </Row>
 
+    </Row>
     {/* Small Stats Blocks */}
     {/* <Row>
       {smallStats.map((stats, idx) => (
@@ -36,8 +36,8 @@ const BlogOverview = ({ smallStats }) => (
       ))}
     </Row> */}
 
-    <Row lg="1"><h3>Cash Flow</h3></Row>
-    <Row lg="2">Cash coming in and going out of your business</Row>
+    <Row lg="1"><h3 style={{paddingLeft:20,color:"darkorange"}}> Graph of Cash Flow</h3></Row>
+   
 
     <Row>
       {/* Users Overview */}

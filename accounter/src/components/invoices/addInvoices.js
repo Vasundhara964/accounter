@@ -189,6 +189,9 @@ function FormComponent() {
     navigate('/invoices')
   };
 
+
+ 
+
   useEffect(()=>{
     const billData= InvoiceData.getBillData(id)
     if(billData){
@@ -209,6 +212,7 @@ function FormComponent() {
      setFormData(data)
     }
   },[])
+formData.total=formData.quantity*formData.price;
 
   return (
     <Card sx={{m:1,p:3,bgcolor:'beige',color:'green'} } style={{padding:20,height:900,margin:20}}>
@@ -346,19 +350,12 @@ function FormComponent() {
           onChange={handleInputChange}
         />
       </div>
-      <div style={{padding:10,paddingLeft:400}}>
-        <label htmlFor="total">Total:<span style={{color:"red"}}>*</span></label>
-        <input
-          type="number"
-          id="total"
-          name="total"
-          value={formData.quantity}
-          required
-          onChange={handleInputChange}
-        />
-      </div>
-      <div style={{paddingLeft:450}}>
-      <button type="submit" style={{display:'flex',margin:50,color:'red'}} >Submit</button>
+      <div style={{paddingLeft:350,paddingTop:40}}>
+          <label htmlFor="total">Total:</label>
+          <input type="text" id="total" value={formData.total} readOnly />
+        </div>
+      <div style={{paddingLeft:390}}>
+      <button type="submit" style={{display:'flex',margin:50,color:'red'}} > Submit </button>
       </div>
       </Grid>
       </div>

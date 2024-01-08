@@ -70,28 +70,34 @@ import React, { Component } from 'react'
 
 let billsData=[
     {id:'1',
-    name:'a',
-    vname:'b',
-    quantity:'10',
-    status:'instock'
+    name:'hp laptop',
+    vname:'Kelvin',
+    quantity:'15',
+    status:'In Stock'
 },
 {id:'2',
-name:'a',
-vname:'b',
+name:'samsung Refridgerator',
+vname:'john',
     quantity:'10',
-    status:'instock'
+    status:'In Stock'
 },
 {id:'3',
-name:'a',
-vname:'b',
-    quantity:'10',
-    status:'instock'
+name:'dell laptop',
+vname:'hello',
+    quantity:'15',
+    status:'In Stock'
 },
 {id:'4',
-name:'a',
-vname:'b',
-    quantity:'10',
-    status:'instock'
+name:'vivo mobile',
+vname:'Horatio',
+    quantity:'35',
+    status:'In Stock'
+},
+{id:'5',
+name:'Apple iphones',
+vname:'Joseph',
+    quantity:'18',
+    status:'In Stock'
 },
 ]
 

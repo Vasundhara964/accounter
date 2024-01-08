@@ -74,14 +74,14 @@ class UsersByDevice extends React.Component {
             {/* </Col> */}
           {/* </Row> */}
         {/* </CardFooter> */}
-        <p style={{fontSize:24,font:"san-serif" }}>$425.00K
+        <p style={{fontSize:24,font:"san-serif" }}>5,60,286/-
         <p style={{color:"green",padding:10,fontSize:12}}> incomes</p></p>
         <p style={{fontSize:40,fontFamily:"sans-serif"}}>-</p>
-        <p style={{fontSize:24,font:"san-serif" }}>$120.00K
+        <p style={{fontSize:24,font:"san-serif" }}>4,85,000/-
         <p style={{color:"#c9444d",fontSize:12}}> Outgoings</p></p>
         <p style={{fontSize:40,fontFamily:"sans-serif"}}>=</p>
-        <p style={{fontSize:24,font:"san-serif" }}>$305.00K
-        <p style={{color:"skyblue",padding:10,fontSize:12}}> Profits</p></p>
+        <p style={{fontSize:24,font:"san-serif" }}>+75,286/-
+        <p style={{color:"blue",padding:10,fontSize:12}}> Profits</p></p>
       </Card>
     );
   }

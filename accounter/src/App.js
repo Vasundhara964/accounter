@@ -76,6 +76,7 @@ import PrivateRoots from "./layouts/privateRoots";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 import Login from "./components/components-overview/login";
+import ForgotPassword from "./components/components-overview/forgotpassword";
 
 export default ()=> {
   debugger
@@ -88,6 +89,7 @@ export default ()=> {
     <Routes>
    <Route path='/login' element={
                 <Login/> } />
+   <Route path="/forgotpassword" element={<ForgotPassword />} />
 
    
    
@@ -112,4 +114,5 @@ export default ()=> {
     </Routes>
   </Router>
 )};
+
 

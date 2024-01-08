@@ -14,11 +14,17 @@ const [isAuthenticated,setIsAuthenticated] = React.useState(localStorage.getItem
 
 
     const login =()=>{
-if(email=="accounter@gmail.com" && password== "accounter123" ){
+if(email=="user1@gmail.com" && password== "accounter123" ){
   localStorage.setItem("isAuthenticated",1)
 setIsAuthenticated(localStorage.setItem("isAuthenticated",1))
 navigate('/blog-overview')
-}else{
+}
+else if(email=="customer@gmail.com" && password== "customer123" ){
+  localStorage.setItem("isAuthenticated",1)
+setIsAuthenticated(localStorage.setItem("isAuthenticated",1))
+navigate('/dashboard2')
+}
+else{
   setError(true)
   
 }
@@ -27,10 +33,10 @@ navigate('/blog-overview')
 
   return (
     
-    <Grid container style={{margin:'auto',display:'flex',border:'2px solid', justifyContent: 'center',backgroundColor:'silver', alignItems: 'center'}}>
+    <Grid container style={{margin:'auto',display:'flex', justifyContent: 'center',backgroundColor:'#afcbd5', alignItems: 'center'}}>
       <Grid item md='6' sm='8' xs='12' >
         
-    <Card style={{padding:"40px" ,margin:'30px',display:'flex',width:'auto',height:'auto',border:'2px solid',marginTop:'20%',marginBottom:'20%'}}>
+    <Card style={{padding:"40px" ,margin:'30px',width:'800',height:'700',border:'red',marginTop:'10%',marginBottom:'20%'}}>
 
       {error? <Alert severity="error">Something wrong,check it out!</Alert>: "" }
     <h3 item  style={{display:'flex',justifyContent:'center',fontFamily:'Monospaced'}}>Login</h3>
@@ -53,7 +59,7 @@ navigate('/blog-overview')
 </FormControl>
 
   <Grid item style={{display: 'flexbox',width:'auto',textAlign:'center'}}>
-  <a href='#' style={{display:'block',textAlign:'right',fontSize:'18px',color:'blue',marginTop:'10px'}}> forgot your password ?</a>
+  <a href='/forgotpassword' style={{display:'block',textAlign:'right',fontSize:'18px',color:'red',marginTop:'10px'}}> forgot your password ?</a>
     <Button style={{width:'400px',marginTop:'30px'}} variant='contained' onClick={login}>Login</Button>
     
     

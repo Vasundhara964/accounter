@@ -64,6 +64,9 @@ function FormComponent() {
     }
   },[])
 
+  formDat.total = (formDat.rate * (1 + formDat.tax / 100)).toFixed(2);
+ 
+
   return (
     //<Card sx={{m:1,p:3,bgcolor:'beige',color:'green'} } style={{padding:20,margin:20}}>
        <Card sx={{m:1,p:3,bgcolor:'beige',color:'green'} } style={{padding:50,height:900,width:1000}}>
@@ -71,7 +74,7 @@ function FormComponent() {
         title=" BILL DETAILS"
 />
     <form onSubmit={handleSubmit}>
-    <Box sx={{bgcolor:'lightblue',boxShadow:3,style:{padding:50,height:500,width:1000}}}>
+    <Box sx={{bgcolor:'#ffb3f2',color:'blue',boxShadow:3,style:{padding:50,height:500,width:1000}}}>
       <div style={{alignItems:'center'}}>
         <Grid container style={{padding:50,height:650,width:1000,display:'flex'}}>
     <div style={{padding:10,alignContent:'center'}}>
@@ -160,7 +163,7 @@ function FormComponent() {
       <div style={{padding:10}}>
         <label htmlFor="tax"><strong>Tax:</strong>(in %)<span style={{color:'red'}}> *</span></label>
           <input
-          type="text"
+          type="number"
           id="tax"
           name="tax"
           value={formDat.tax}
@@ -171,15 +174,7 @@ function FormComponent() {
       </div>
       <div style={{padding:20,paddingLeft:250,height:30}}>
         <label htmlFor="total"><strong>Total(in Rs):</strong><span style={{color:'red'}}> *</span></label>
-        <input
-          type="number"
-          id="total"
-          name="total"
-          value={formDat.total}
-          required
-          onChange={handleInputChange}
-
-        />
+        <input type="text" id="total" value={formDat.total} readOnly />
       </div>
       <div style={{paddingLeft:350}}>
       <button type="submit" style={{display:'flex',margin:50}} ><strong>Submit</strong></button>

@@ -36,21 +36,21 @@ export default function() {
       htmlBefore: '<i class="material-icons">people</i>',
       to: "/vendors",
     },
-    /*{
-      title: "HR",
-      htmlBefore: '<i class="material-icons">people</i>',
-      to: "/tables",
-    },*/
+    {
+      title: "stock images",
+      htmlBefore: '<i class="material-icons">camera</i>',
+      to: "/photo",
+    },
     {
       title:"Banking",
       htmlBefore: '<i class="material-icons">house</i>',
       to: "/payment",
     },
-    /*{
-      title:"Reports",
-      htmlBefore: '<i class="material-icons">report</i>',
-      to: "/errors",
-    },*/
+    {
+      title:"FAQ",
+      htmlBefore: '<i class="material-icons">psychology</i>',
+      to: "/faq",
+    },
     /*{
       title:"Apps",
       htmlBefore: '<i class="material-icons">rocket</i>',

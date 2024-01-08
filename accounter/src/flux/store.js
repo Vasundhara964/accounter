@@ -27,7 +27,6 @@ class Store extends EventEmitter {
       default:
     }
   }
-
   toggleSidebar() {
     _store.menuVisible = !_store.menuVisible;
     this.emit(Constants.CHANGE);
